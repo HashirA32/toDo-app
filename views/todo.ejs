@@ -9,28 +9,21 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./assets/styles.css" type="text/css" />
-    <title>Todo app</title>
+    <title>Todo App</title>
   </head>
   <body>
-    <h1>Hy</h1>
+    <h1>Todo List</h1>
     <div id="todo-table">
-      <form action="">
-        <input
-          type="text"
-          ,
-          placeholder="Add new item"
-          ,
-          name="item"
-          required
-        />
-        <button type="submit">Add item</button>
+      <form>
+        <input type="text" placeholder="Add new item" name="item" required />
+        <button type="submit">Add Item</button>
       </form>
       <ul>
-        <li>Apple</li>
-        <li>Mango</li>
-        <li>Orange</li>
-        <li>Banana</li>
+        <% for (let i = 0; i < todo.length; i++) { %>
+        <li><%= todo[i].item %></li>
+        <% } %>
       </ul>
     </div>
+    <script src="../app.js"></script>
   </body>
 </html>
